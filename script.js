@@ -1,7 +1,32 @@
-function toggleMenu(){document.getElementById('hbg').classList.toggle('open');document.getElementById('mob').classList.toggle('open');}
-function closeMenu(){document.getElementById('hbg').classList.remove('open');document.getElementById('mob').classList.remove('open');}
-var ob=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting)x.target.classList.add('on');});},{threshold:0.07});
-document.querySelectorAll('.rv').forEach(function(r){ob.observe(r);});
-window.addEventListener('scroll',function(){document.getElementById('nav').style.boxShadow=window.scrollY>20?'0 2px 20px rgba(0,0,0,.1)':'0 2px 12px rgba(0,0,0,.06)';});
+# Osei Morrison — Portfolio Website
 
-function toggleCard(button){var target=document.getElementById(button.dataset.target);if(!target)return;var expanded=button.getAttribute('aria-expanded')==='true';button.setAttribute('aria-expanded',(!expanded).toString());target.classList.toggle('open',!expanded);if(!expanded){button.textContent='Hide summary';}else{button.textContent='Read summary';}}
+## Project Structure
+
+```
+portfolio/
+├── index.html        # Main HTML file
+├── style.css         # All styles
+├── script.js         # Navigation & scroll animations
+└── images/           # All images
+    ├── photo.png             # Profile photo
+    ├── skill_web.jpg         # Web development skill card
+    ├── skill_gfx.png         # Graphic design skill card
+    ├── fgl_1-4.png           # FGL Logistics screenshots
+    ├── legit_1-3.png         # LegitTrack Pro screenshots
+    ├── mamasark_1-5.png      # Mamasark School MIS screenshots
+    ├── sptms_1.png           # SPTMS screenshots
+    ├── campus_1.jpg          # Campus Navigation screenshots
+    ├── exams_1.jpg           # Exams Allocation screenshots
+    └── shopnest_1-5.*        # ShopNest E-Commerce screenshots
+```
+
+## How to deploy on GitHub Pages
+
+1. Create a new GitHub repository (e.g. `oseimorrison.github.io`)
+2. Upload all files keeping the folder structure above
+3. Go to Settings → Pages → Source: main branch → / (root)
+4. Your site will be live at `https://oseimorrison.github.io`
+
+## Contact
+- Email: oseimorrison700@gmail.com
+- WhatsApp: +233 598 845 140
